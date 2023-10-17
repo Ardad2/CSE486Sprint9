@@ -83,7 +83,6 @@ const WeeklyCalendar = props => {
                                         <View style={{ paddingTop: 10 }} />
                                         <View style={styles.durationContainer}>
                                             <View style={styles.durationDot} />
-                                            <Text style={styles.durationText}>{endTime}</Text>
                                         </View>
                                         <View style={styles.durationDotConnector} />
                                     </View>
