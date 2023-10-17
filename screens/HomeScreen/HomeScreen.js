@@ -140,11 +140,23 @@ const sampleEvents = [
       </View>
         </>
   );
-*/
+
+
+*/ 
+<>
+<View> 
+       <Text style={styles.headingText}>Welcome back {authToken.email} What did you do today?</Text>
+     </View>
+
+     <View style={styles.plusButton}>  
+    <IconButton icon="add-circle-outline" color="black" onPress={startAddBehaviorHandler} />
+    </View>  
+    
 
 <View style={styles.container}>
 <WeeklyCalendar events={behaviorList} style={{ }} />
 </View>
+</>
 
   );
 
