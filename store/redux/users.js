@@ -6,7 +6,7 @@ const usersSlice = createSlice({
         users: [ {
             id: 0,
             username: "John",
-            behaviors: [
+            behaviorLogs: [
 
             ]
         }
@@ -48,7 +48,7 @@ const usersSlice = createSlice({
             state.users.push({
                 id: newId,
                 username: action.payload.username,
-                behaviors: [
+                behaviorLogs: [
                 ]
             });
         
@@ -75,7 +75,7 @@ const usersSlice = createSlice({
             }
 
 
-            state.users[index].behaviors.push({
+            state.users[index].behaviorLogs.push({
                 id: action.payload.id,
                 name: action.payload.name,
                 icon: action.payload.icon,
@@ -100,16 +100,16 @@ const usersSlice = createSlice({
                 }
             }
 
-            for (var i = 0; i < state.users[index].behaviors.length ; i++)
+            for (var i = 0; i < state.users[index].behaviorLogs.length ; i++)
             {                
-                if (state.users[index].behaviors.name == (action.payload.behaviorName)) {
+                if (state.users[index].behaviorLogs.name == (action.payload.behaviorName)) {
                     behaviorIndex = i;
                 }
             }
 
 
 
-            state.users[index].behaviors[behaviorIndex].count++;
+            state.users[index].behaviorLogs[behaviorIndex].count++;
 
 
         },
@@ -127,17 +127,17 @@ const usersSlice = createSlice({
                 }
             }
 
-            for (var i = 0; i < state.users[index].behaviors.length ; i++)
+            for (var i = 0; i < state.users[index].behaviorLogs.length ; i++)
             {                
-                if (state.users[index].behaviors.name == (action.payload.behaviorName)) {
+                if (state.users[index].behaviorLogs.name == (action.payload.behaviorName)) {
                     behaviorIndex = i;
                 }
             }
 
 
-            if (state.users[index].behaviors[behaviorIndex].count > 0)
+            if (state.users[index].behaviorLogs[behaviorIndex].count > 0)
             {
-            state.users[index].behaviors[behaviorIndex].count--;
+            state.users[index].behaviorLogs[behaviorIndex].count--;
             }
 
 
