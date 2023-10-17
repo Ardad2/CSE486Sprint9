@@ -15,7 +15,7 @@ function BehaviorDetailScreen( {route, navigation} )
     
     const userList = useSelector( (state) => state.users.users);
     const currUser = userList.filter(user => user.username == authToken.email);
-    const behaviorList = currUser[0].behaviors;
+    const behaviorList = currUser[0].behaviorLogs;
 
     var behaviorIndex = 0;
 

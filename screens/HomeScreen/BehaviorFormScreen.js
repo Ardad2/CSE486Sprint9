@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, Modal, Image} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import { useSelector, dispatch , useDispatch} from 'react-redux';
-import { addBehavior, removeBehavior } from '../../store/redux/behaviors';
+import { addBehavior, removeBehavior } from '../../store/redux/behaviorLogs';
 import { addUserBehavior } from '../../store/redux/users';
 import { set } from 'react-native-reanimated';
 
@@ -19,7 +19,7 @@ export default function BehaviorFormScreen( {route, navigation} )
     let date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
     setDate(date);
   }, []);
-        const behaviorList = useSelector((state) => state.behaviors.behaviors);
+        const behaviorList = useSelector((state) => state.behaviorLogs.behaviorLogs);
 
         const behaviorName = route.params.behaviorName;
 

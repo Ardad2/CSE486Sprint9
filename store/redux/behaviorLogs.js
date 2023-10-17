@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const behaviorsSlice = createSlice({
+const behaviorLogsSlice = createSlice({
     name: 'behaviorLogs',
     initialState: {
         behaviorLogs: [],   

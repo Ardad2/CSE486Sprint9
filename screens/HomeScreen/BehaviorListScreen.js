@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, Modal, Image, SectionList, StatusBar, TouchableOpacity} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import { useSelector, dispatch , useDispatch} from 'react-redux';
-import { addBehavior, removeBehavior } from '../../store/redux/behaviors';
+import { addBehavior, removeBehavior } from '../../store/redux/behaviorLogs';
 
 const data = [
   {
