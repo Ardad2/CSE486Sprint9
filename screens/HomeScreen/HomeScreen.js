@@ -39,7 +39,7 @@ const currUser = userList.filter(user => user.username == authToken.email);
 const behaviorList = currUser[0].behaviors;
 
 const sampleEvents = [
-  { 'start': '2023-07-17 09:00:00', 'duration': '00:20:00', 'note': 'Walk my dog' },
+  { 'start': '2023-10-17 09:00:00', 'duration': '00:20:00', 'note': 'Walk my dog' },
   { 'start': '2020-03-24 14:00:00', 'duration': '01:00:00', 'note': 'Doctor\'s appointment' },
   { 'start': '2020-03-25 08:00:00', 'duration': '00:30:00', 'note': 'Morning exercise' },
   { 'start': '2020-03-25 14:00:00', 'duration': '02:00:00', 'note': 'Meeting with client' },
