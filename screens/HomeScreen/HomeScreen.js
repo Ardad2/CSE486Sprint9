@@ -36,7 +36,7 @@ const authToken = useSelector( (state) => state.authTokens.data[0]);
 
 const userList = useSelector( (state) => state.users.users);
 const currUser = userList.filter(user => user.username == authToken.email);
-const behaviorList = currUser[0].behaviors;
+const behaviorList = currUser[0].behaviorLogs;
 
 const sampleEvents = [
   { 'start': '2023-10-17 09:00:00', 'duration': '00:20:00', 'note': 'Walk my dog' },
