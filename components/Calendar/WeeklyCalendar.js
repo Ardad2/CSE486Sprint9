@@ -68,10 +68,6 @@ const WeeklyCalendar = props => {
                     })
                 } else {
                     eventViews = events.map((event, j) => {
-                        let startTime = moment(event.start).format('LT').toString()
-                        let duration = event.duration.split(':')
-                        let seconds = parseInt(duration[0]) * 3600 + parseInt(duration[1]) * 60 + parseInt(duration[2])
-                        let endTime = moment(event.start).add(seconds, 'seconds').format('LT').toString()
                         return (
                             <View key={i + "-" + j}>
                                 <View style={styles.event}>
