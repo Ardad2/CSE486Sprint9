@@ -4,11 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-//Fix fire base import
-
-import * as firebase from 'firebase';
-import '@firebase/auth';
-import '@firebase/firestore';
+//import {firebase} from '../Firebase/firebase';
 
 import { StyleSheet, View } from 'react-native';
 
@@ -38,7 +34,7 @@ import { store } from './store/redux/store';
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
 
-const firebaseConfig = {
+/*const firebaseConfig = {
 
   apiKey: "AIzaSyAUuZUgvlmMYBOl_Kg43Eb2sHnEJp4_us4",
 
@@ -60,6 +56,7 @@ if (!firebase.apps.length) {
 
 
 firebase.initializeApp(config);
+*/
 
 
 function AuthStack() {
