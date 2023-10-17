@@ -17,7 +17,7 @@ import IconButton from '../../components/IconButton';
 import BehaviorDetailScreen from './BehaviorDetailScreen';
 import BehaviorFormScreen from './BehaviorFormScreen';
 
-import WeeklyCalendar  from './components/Calendar/WeeklyCalendar';
+import WeeklyCalendar  from '../../components/Calendar/WeeklyCalendar';
 
 
 import { authenticateAuthTokens, logoutAuthTokens } from '../../store/redux/authTokens';
