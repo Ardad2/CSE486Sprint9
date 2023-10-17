@@ -62,6 +62,16 @@ const usersSlice = createSlice({
                 date: "2023-10-16",
                 type: "YES"
             });
+            state.users[newId].behaviorLogs.push({
+                id: Math.random().toString(),
+                name: "Test2",
+                icon: "TEST",
+                count: 0,
+                goalCount: 40,
+                memo: "",
+                date: "2023-10-16",
+                type: "YES"
+            });
         
 
 
