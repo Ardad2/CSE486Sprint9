@@ -34,7 +34,7 @@ const WeeklyCalendar = props => {
         let dateMap = new Map()
 
         for (let i = 0; i < events.length; i++) {
-            let eventDate = moment(events[i].start).format('YYYY-MM-DD').toString()
+            let eventDate = moment(events[i].date).format('YYYY-MM-DD').toString()
             if (dateMap.has(eventDate)) {
                 let eventArr = dateMap.get(eventDate)
                 eventArr.push(events[i])
@@ -75,17 +75,6 @@ const WeeklyCalendar = props => {
                         return (
                             <View key={i + "-" + j}>
                                 <View style={styles.event}>
-                                    <View style={styles.eventDuration}>
-                                        <View style={styles.durationContainer}>
-                                            <View style={styles.durationDot} />
-                                            <Text style={styles.durationText}>{startTime}</Text>
-                                        </View>
-                                        <View style={{ paddingTop: 10 }} />
-                                        <View style={styles.durationContainer}>
-                                            <View style={styles.durationDot} />
-                                        </View>
-                                        <View style={styles.durationDotConnector} />
-                                    </View>
                                     <View style={styles.eventNote}>
                                         <Text style={styles.eventText}>{event.note}</Text>
                                     </View>
