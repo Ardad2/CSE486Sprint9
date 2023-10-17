@@ -72,7 +72,10 @@ const WeeklyCalendar = props => {
                             <View key={i + "-" + j}>
                                 <View style={styles.event}>
                                     <View style={styles.eventNote}>
-                                        <Text style={styles.eventText}>{event.note}</Text>
+                                        <Text style={styles.eventText}>{event.name}</Text>
+                                    </View>
+                                    <View style={styles.eventNote}>
+                                        <Text style={styles.eventText}>{event.count}/{event.goalCount}</Text>
                                     </View>
                                 </View>
                                 {j < events.length - 1 && <View style={styles.lineSeparator} />}

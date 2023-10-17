@@ -39,16 +39,16 @@ const currUser = userList.filter(user => user.username == authToken.email);
 const behaviorList = currUser[0].behaviorLogs;
 
 const sampleEvents = [
-  { 'date': '2023-10-17', 'duration': '00:20:00', 'note': 'Walk my dog' },
-  { 'date': '2020-03-24', 'duration': '01:00:00', 'note': 'Doctor\'s appointment' },
-  { 'date': '2020-03-25', 'duration': '00:30:00', 'note': 'Morning exercise' },
-  { 'date': '2020-03-25', 'duration': '02:00:00', 'note': 'Meeting with client' },
-  { 'date': '2020-03-25', 'duration': '01:00:00', 'note': 'Dinner with family' },
-  { 'date': '2020-03-26', 'duration': '01:00:00', 'note': 'Schedule 1' },
-  { 'date': '2020-03-26', 'duration': '02:00:00', 'note': 'Schedule 2' },
-  { 'date': '2020-03-26', 'duration': '01:30:00', 'note': 'Schedule 3' },
-  { 'date': '2020-03-26', 'duration': '02:00:00', 'note': 'Schedule 4' },
-  { 'date': '2020-03-26', 'duration': '01:00:00', 'note': 'Schedule 5' }
+  { 'date': '2023-10-17', 'name': 'Walk my dog', 'count': '0', 'goalCount': '0' },
+  { 'date': '2020-03-24', 'name': 'Doctor\'s appointment' , 'count': '0', 'goalCount': '0'},
+  { 'date': '2020-03-25', 'name': 'Morning exercise', 'count': '0', 'goalCount': '0' },
+  { 'date': '2020-03-25', 'name': 'Meeting with client' , 'count': '0', 'goalCount': '0'},
+  { 'date': '2020-03-25', 'name': 'Dinner with family' , 'count': '0', 'goalCount': '0'},
+  { 'date': '2020-03-26', 'name': 'Schedule 1' , 'count': '0', 'goalCount': '0'},
+  { 'date': '2020-03-26', 'name': 'Schedule 2', 'count': '0', 'goalCount': '0' },
+  { 'date': '2020-03-26','name': 'Schedule 3' , 'count': '0', 'goalCount': '0'},
+  { 'date': '2020-03-26', 'name': 'Schedule 4' , 'count': '0', 'goalCount': '0'},
+  { 'date': '2020-03-26', 'name': 'Schedule 5', 'count': '0', 'goalCount': '0' }
 ]
 
 
@@ -143,7 +143,7 @@ const sampleEvents = [
 */
 
 <View style={styles.container}>
-<WeeklyCalendar events={sampleEvents} style={{ }} />
+<WeeklyCalendar events={behaviorList} style={{ }} />
 </View>
 
   );
