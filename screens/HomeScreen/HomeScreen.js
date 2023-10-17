@@ -97,7 +97,7 @@ const sampleEvents = [
   }
 
   return (
-    /*
+    
     <>
     <StatusBar style="light"/>
     <View style={styles.appContainer}>
@@ -139,13 +139,19 @@ const sampleEvents = [
         </View>
       </View>
         </>
-*/
+  );
+
+/*
+ CALENDAR VIEW BELOW
 
 <View style={styles.container}>
 <WeeklyCalendar events={sampleEvents} style={{ }} />
 </View>
 
   );
+
+  */
+
 }
 
 const styles = StyleSheet.create({
