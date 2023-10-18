@@ -54,7 +54,7 @@ const usersSlice = createSlice({
 
             state.users[newId].behaviorLogs.push({
                 id: Math.random().toString(),
-                name: "TEST",
+                name: "Go for a walk",
                 icon: "TEST",
                 count: 0,
                 goalCount: 40,
@@ -64,12 +64,32 @@ const usersSlice = createSlice({
             });
             state.users[newId].behaviorLogs.push({
                 id: Math.random().toString(),
+                name: "Healthy eating",
+                icon: "TEST",
+                count: 0,
+                goalCount: 30,
+                memo: "",
+                date: "2023-10-16",
+                type: "YES"
+            });
+            state.users[newId].behaviorLogs.push({
+                id: Math.random().toString(),
+                name: "Read a book",
+                icon: "TEST",
+                count: 0,
+                goalCount: 100,
+                memo: "",
+                date: "2023-10-14",
+                type: "YES"
+            });
+            state.users[newId].behaviorLogs.push({
+                id: Math.random().toString(),
                 name: "Test2",
                 icon: "TEST",
                 count: 0,
                 goalCount: 40,
                 memo: "",
-                date: "2023-10-16",
+                date: "2023-10-12",
                 type: "YES"
             });
         

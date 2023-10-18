@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import moment from 'moment/min/moment-with-locales';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { applyLocale, displayTitleByLocale } from './Locale';
+import { useNavigation } from '@react-navigation/native';
+
 import styles from './Style';
 
 const WeeklyCalendar = props => {
