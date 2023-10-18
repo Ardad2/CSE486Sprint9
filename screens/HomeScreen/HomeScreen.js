@@ -151,10 +151,10 @@ const sampleEvents = [
      <View style={styles.plusButton}>  
     <IconButton icon="add-circle-outline" color="black" onPress={startAddBehaviorHandler} />
     </View>  
-    
+
 
 <View style={styles.container}>
-<WeeklyCalendar events={behaviorList} style={{ }} />
+<WeeklyCalendar events={currUser[0].behaviorLogs} style={{ }} />
 </View>
 </>
 
