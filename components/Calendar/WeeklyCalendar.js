@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Text, View, ScrollView, TouchableOpacity, TouchableWithoutFeedback, Modal, Platform, ActivityIndicator } from 'react-native';
+import { Text, View, ScrollView, TouchableOpacity, TouchableWithoutFeedback, Modal, Platform, ActivityIndicator, Pressable } from 'react-native';
 import PropTypes from 'prop-types';
 import moment from 'moment/min/moment-with-locales';
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -8,7 +8,15 @@ import { useNavigation } from '@react-navigation/native';
 
 import styles from './Style';
 
+
+
 const WeeklyCalendar = props => {
+
+    const navigation = useNavigation();
+
+
+
+
     const [currDate, setCurrDate] = useState(moment(props.selected).locale(props.locale))
     const [weekdays, setWeekdays] = useState([])
     const [weekdayLabels, setWeekdayLabels] = useState([])
@@ -23,6 +31,7 @@ const WeeklyCalendar = props => {
     const [scheduleView, setScheduleView] = useState(undefined)
     const [dayViewOffsets, setDayViewOffsets] = useState(undefined)
     const scrollViewRef = useRef()
+
     
     useEffect(() => { // only first mount
         //applyLocale(props.locale, cancelText => setCancelText(cancelText), confirmText => setConfirmText(confirmText))
@@ -71,6 +80,11 @@ const WeeklyCalendar = props => {
                 } else {
                     eventViews = events.map((event, j) => {
                         return (
+                          /*  <Pressable 
+                            android_ripple ={{color:'#210644'}}
+                            onPress={pressHandler}
+                            style={({pressed}) => pressed && styles.pressedItem}
+                            > */
                             <View key={i + "-" + j}>
                                 <View style={styles.event}>
                                     <View style={styles.eventNote}>
@@ -82,6 +96,7 @@ const WeeklyCalendar = props => {
                                 </View>
                                 {j < events.length - 1 && <View style={styles.lineSeparator} />}
                             </View>
+                           /* </Pressable>*/
                         )
                     })
                 }
@@ -165,6 +180,11 @@ const WeeklyCalendar = props => {
         setSelectedDate(weekday.clone())
         if (props.onDayPress !== undefined) props.onDayPress(weekday.clone(), i)
     }
+
+   /* function pressHandler() {
+        props.onPress(event.name)
+      }
+      */
 
     return (
         <View style={[styles.component, props.style]}>
