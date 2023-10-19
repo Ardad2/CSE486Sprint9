@@ -6,7 +6,6 @@ import { addBehavior, removeBehavior } from '../../store/redux/behaviorLogs';
 import { addUserBehavior } from '../../store/redux/users';
 import { set } from 'react-native-reanimated';
 
-
 export default function BehaviorFormScreen( {route, navigation} )
 {
 
@@ -16,7 +15,7 @@ export default function BehaviorFormScreen( {route, navigation} )
 
   useEffect( () => {
     let today = new Date();
-    let date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+    let date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear(); // get current date
     setDate(date);
   }, []);
         const behaviorList = useSelector((state) => state.behaviorLogs.behaviorLogs);
@@ -34,6 +33,7 @@ export default function BehaviorFormScreen( {route, navigation} )
     const [enteredGoalCount, setEnteredGoalCount] = useState('');
     const [type, setType] = useState(behaviorName)
 
+  // set user info
     function nameInputHandler(enteredName) {
 
       setEnteredName(enteredName);
@@ -74,7 +74,7 @@ export default function BehaviorFormScreen( {route, navigation} )
              date: date,
              type: type
            }
-         ));*/
+         ));*/ 
 
 
          dispatch(addUserBehavior(
