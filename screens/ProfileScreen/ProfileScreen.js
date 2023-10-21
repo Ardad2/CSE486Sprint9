@@ -48,7 +48,16 @@ function ProfileScreen( {route, navigation} )
             }
           ));
     }
-
+    /*
+    - some features for the profile screen that will need to be added:
+    - Change profile picture / View profile picture
+     - List behaviors that the user will want to display
+        - some behaviors might not want to be displayed on the profile
+        - or show behaviors of importance to the user, maybe more proud of some than others
+    - Bio for the user
+    - Name of the user
+    - 
+    */
     return (
         <View> 
         <Text>{behaviorList[behaviorIndex].name}</Text>
