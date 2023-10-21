@@ -56,6 +56,7 @@ function ProfileScreen( {route, navigation} )
         - or show behaviors of importance to the user, maybe more proud of some than others
     - Bio for the user
     - Name of the user
+    - Username for the user
     - 
     */
     return (
