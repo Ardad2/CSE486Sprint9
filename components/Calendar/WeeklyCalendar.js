@@ -6,6 +6,8 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { applyLocale, displayTitleByLocale } from './Locale';
 import { useNavigation } from '@react-navigation/native';
 
+import BehaviorItem from '../../components/BehaviorItem';
+
 import styles from './Style';
 
 
@@ -86,10 +88,6 @@ const WeeklyCalendar = props => {
                 } else {
                     eventViews = events.map((event, j) => {
                         return (
-                            <Pressable 
-                            android_ripple ={{color:'#210644'}}
-                            onPress={pressHandler}
-                            > 
                             <View key={i + "-" + j}>
                                 <View style={styles.event}>
                                     <View style={styles.eventNote}>
@@ -101,7 +99,6 @@ const WeeklyCalendar = props => {
                                 </View>
                                 {j < events.length - 1 && <View style={styles.lineSeparator} />}
                             </View>
-                            </Pressable>
                         )
                     })
                 }
@@ -120,7 +117,12 @@ const WeeklyCalendar = props => {
                             <Text style={[styles.dayText, { color: props.themeColor }]}>{weekdayToAdd.format(props.weekdayFormat).toString()}</Text>
                         </View>
                         <View style={[styles.allEvents, eventViews.length === 0 ? { width: '100%', backgroundColor: 'lightgrey' } : {}]}>
+                        <Pressable 
+                            android_ripple ={{color:'#210644'}}
+                            onPress={pressHandler}
+                            > 
                             {eventViews}
+                            </Pressable>
                         </View>
                     </View>
                 )
