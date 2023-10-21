@@ -12,7 +12,13 @@ import styles from './Style';
 
 const WeeklyCalendar = props => {
 
+    
+
     const navigation = useNavigation();
+
+    function pressHandler(name) {
+        navigation.navigate("BehaviorDetailScreen", { name: name});
+      }
 
 
 
@@ -80,11 +86,10 @@ const WeeklyCalendar = props => {
                 } else {
                     eventViews = events.map((event, j) => {
                         return (
-                          /*  <Pressable 
+                            <Pressable 
                             android_ripple ={{color:'#210644'}}
                             onPress={pressHandler}
-                            style={({pressed}) => pressed && styles.pressedItem}
-                            > */
+                            > 
                             <View key={i + "-" + j}>
                                 <View style={styles.event}>
                                     <View style={styles.eventNote}>
@@ -96,7 +101,7 @@ const WeeklyCalendar = props => {
                                 </View>
                                 {j < events.length - 1 && <View style={styles.lineSeparator} />}
                             </View>
-                           /* </Pressable>*/
+                            </Pressable>
                         )
                     })
                 }
