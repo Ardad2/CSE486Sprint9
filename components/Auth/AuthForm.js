@@ -1,3 +1,5 @@
+// check inputted email and password match a user in the database
+
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
