@@ -49,11 +49,9 @@ const WeeklyCalendar = props => {
         setCalendarReady(true)
     }, [])
 
-    // This function organizes given events into an event map
     const createEventMap = events => {
-        let dateMap = new Map() // Create a map into which the events can be organized
+        let dateMap = new Map()
 
-        // Each eventDate will have a list of events for that date
         for (let i = 0; i < events.length; i++) {
             let eventDate = moment(events[i].date).format('YYYY-MM-DD').toString()
             if (dateMap.has(eventDate)) {
@@ -68,7 +66,6 @@ const WeeklyCalendar = props => {
         createWeekdays(currDate, dateMap)
     }
 
-    // 
     const createWeekdays = (date, map) => {
         let dayViews = []
         let offsets = []
@@ -158,7 +155,6 @@ const WeeklyCalendar = props => {
         return (selectedDate.year() === date.year() && selectedDate.month() === date.month() && selectedDate.date() === date.date())
     }
 
-    // Allows the user to choose a date in the calendar 
     const pickerOnChange = (_event, pickedDate) => {
         if (Platform.OS === 'android') {
             setPickerVisible(false)

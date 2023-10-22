@@ -5,6 +5,8 @@ import {createUser} from '../../util/auth';
 import { Alert } from 'react-native';
 import { useSelector, dispatch , useDispatch} from 'react-redux';
 import { authenticateAuthTokens, logoutAuthTokens } from '../../store/redux/authTokens';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+//import {auth} from '../../firebase';
 
 
 function SignupScreen() {
@@ -19,7 +21,7 @@ function SignupScreen() {
     setIsAuthenticating(true);
     try {
       const data = await createUser(email, password);
-      
+       
       console.log(data.idToken);
 
       dispatch(addUser(
@@ -27,7 +29,9 @@ function SignupScreen() {
           username: data.email,
         }
       ));
-       
+
+
+//      createUserWithEmailAndPassword(auth,email,password);
       
 
       dispatch(authenticateAuthTokens(
@@ -48,6 +52,7 @@ function SignupScreen() {
   }
 
   if (isAuthenticating) {
+
     return <LoadingOverlay message="Creating user..." />;
   }
 

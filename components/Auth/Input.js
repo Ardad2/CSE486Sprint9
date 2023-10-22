@@ -3,15 +3,15 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { Colors } from '../../constants/styles';
 
 function Input({
-  label, // Label for the input text field 
-  keyboardType, 
-  secure, // boolean indicating whether the text input is secure or not (i.e., a password as the text input)
-  onUpdateValue, // Updates the value of the input field when the inout changes
+  label,
+  keyboardType,
+  secure,
+  onUpdateValue,
   value,
   isInvalid,
 }) {
   return (
-    <View style={styles.inputContainer}> // View component which contains a Text (label) and TextInput (input)component
+    <View style={styles.inputContainer}>
       <Text style={[styles.label, isInvalid && styles.labelInvalid]}>
         {label}
       </Text>

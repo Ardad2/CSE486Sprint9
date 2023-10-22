@@ -27,4 +27,3 @@ const authTokensSlice = createSlice({
 export const authenticateAuthTokens = authTokensSlice.actions.authenticate;
 export const logoutAuthTokens = authTokensSlice.actions.logout;
 export default authTokensSlice.reducer;
-

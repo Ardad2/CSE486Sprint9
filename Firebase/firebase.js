@@ -1,6 +1,5 @@
 import * as firebase from 'firebase';
 
-// This object has all the configurations for the Firebase
 const firebaseConfig = {
 
     apiKey: "AIzaSyAUuZUgvlmMYBOl_Kg43Eb2sHnEJp4_us4",
@@ -17,10 +16,9 @@ const firebaseConfig = {
   
   };
 
-// Intiialize the Firebase if no prexisting applications already exist 
-if(!firebase.apps.length) 
+if(!firebase.apps.length)
 {
-  firebase.intializeApp(firebaseConfig); // Initialize Firebase with the configuration above by calling that object
+  firebase.intializeApp(firebaseConfig);
 }
 
 export {firebase}
