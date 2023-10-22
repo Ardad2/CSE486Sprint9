@@ -64,10 +64,15 @@ function ProfileScreen( {route, navigation} )
     or a dark screen mode since that is quite popular recently
 
     Some more possible features:
-        allow the ability to post highlights to their friends
-        can chose whether the posts can be viewed by anyone or friends
-        view the users likes
+      -  allow the ability to post highlights to their friends
+       - can chose whether the posts can be viewed by anyone or friends
+       - view the users likes
+       - view the users following / followers 
+       - look at the profiles behaviors in a list format
+       - look at the profiles behaviors in a box format
     */
+
+
     
     return (
         <View> 
