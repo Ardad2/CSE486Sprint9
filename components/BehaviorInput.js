@@ -3,8 +3,10 @@ import { StyleSheet, View, TextInput, Button, Modal, Image } from 'react-native'
 
 function BehaviorInput(props) {
 
+    // Keeps track of the text entered into the text input field
     const [enteredBehaviorText, setEnteredBehaviorText] = useState('');
 
+    // This handler funcion updates setEnteredBehaviorText with the text that was just entered by the user
     function behaviorInputHandler(enteredText) {
         setEnteredBehaviorText(enteredText);
       };
