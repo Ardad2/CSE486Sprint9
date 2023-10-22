@@ -6,13 +6,13 @@ import { StyleSheet, View } from 'react-native';
 import Button from '../ui/Button';
 import Input from './Input';
 
-function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
+function AuthForm({ isLogin, onSubmit, credentialsInvalid }) { // save info the user just inputted to compare
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredConfirmEmail, setEnteredConfirmEmail] = useState('');
   const [enteredPassword, setEnteredPassword] = useState('');
   const [enteredConfirmPassword, setEnteredConfirmPassword] = useState('');
 
-  const {
+  const { // check if credentials are valid
     email: emailIsInvalid,
     confirmEmail: emailsDontMatch,
     password: passwordIsInvalid,
@@ -45,7 +45,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
     });
   }
 
-  return (
+  return ( // let user know if the comination of username and password match
     <View style={styles.form}>
       <View>
         <Input
@@ -95,6 +95,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
 
 export default AuthForm;
 
+// styling
 const styles = StyleSheet.create({
 
   buttons: {
