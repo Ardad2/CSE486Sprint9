@@ -24,6 +24,8 @@ export default function Settings() {
              <View style={styles.button} >
              <Button title="My Profile" onPress={logout} color="black"/>
              <Button title="Vacation Mode?" onPress={logout} color="black"/>
+             <Button title="Light Mode" onPress={logout} color="black"/>
+             <Button title="Dark Mode" onPress={logout} color="black"/>
                 <Button title="Log Out" onPress={logout} color="black"/>
             </View>
             </View>
