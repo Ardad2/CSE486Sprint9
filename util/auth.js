@@ -1,7 +1,9 @@
 // get token to authenticate user when creating account or logging in
+// The authenticate, createUser, and login functions in this code interact with/make requests to the Firebase authentication service (as indicated by the API key below) to authenticate a user attempting to log in
 
 import axios from 'axios';
 
+// Need this API key to make requests to Firebase
 const API_KEY = 'AIzaSyAUuZUgvlmMYBOl_Kg43Eb2sHnEJp4_us4'
 
 async function authenticate(mode, email, password) {
