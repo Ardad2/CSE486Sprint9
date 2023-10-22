@@ -32,6 +32,17 @@ export default function Settings() {
   );
 }
 
+/*
+Settings needed to be added:
+  - Better display 
+  - Better usability
+  - Easy functionality to easily change settings
+  - Vacatioon mode having the ability to take off notifications for the time being
+  - Save settings
+  - Settings being able to reached regardless of the page you're on
+  - Change username/name/password
+*/
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
