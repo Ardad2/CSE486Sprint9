@@ -1,8 +1,9 @@
+// decide what the user will see after logging in
+
 import {View, Text, Button, StyleSheet} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import { useSelector, dispatch , useDispatch} from 'react-redux';
 import { incrementBehavior, decrementBehavior } from '../../store/redux/users';
-
 
 function ProfileScreen( {route, navigation} )
 {
@@ -11,7 +12,7 @@ function ProfileScreen( {route, navigation} )
 
     const authToken = useSelector( (state) => state.authTokens.data[0]); 
 
-    //const behaviorList = useSelector( (state) => state.users.users[0].behaviors);
+    // const behaviorList = useSelector( (state) => state.users.users[0].behaviors);
     
     const userList = useSelector( (state) => state.users.users);
     const currUser = userList.filter(user => user.username == authToken.email);
@@ -26,12 +27,9 @@ function ProfileScreen( {route, navigation} )
         }
     }
 
-
-
     const name = route.params.name;
 
-
-    function decrementGoalCount() {
+    function decrementGoalCount() { // decrease behavior's current count
         dispatch(decrementBehavior(
             {
                 username: authToken.email,
@@ -40,7 +38,7 @@ function ProfileScreen( {route, navigation} )
           ));
      }
 
-     function incrementGoalCount() {
+     function incrementGoalCount() { // increase behavior's current count
         dispatch(incrementBehavior(
             {
                 username: authToken.email,
@@ -48,6 +46,7 @@ function ProfileScreen( {route, navigation} )
             }
           ));
     }
+    
     /*
     - some features for the profile screen that will need to be added:
     - Change profile picture / View profile picture
@@ -61,6 +60,7 @@ function ProfileScreen( {route, navigation} )
     - potentially link to facebook account?
     - add Maz's easier capability for those that are disabled
     */
+    
     return (
         <View> 
         <Text>{behaviorList[behaviorIndex].name}</Text>
