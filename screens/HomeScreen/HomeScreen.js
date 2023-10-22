@@ -60,6 +60,14 @@ const sampleEvents = [
     setDate(date);
   }, []);
 
+  /*
+  Home settings needed to be added
+  - Ability to reach the profile using the navigation bar at the bottom
+  - Reach the settings page
+  - Ability to go to messages
+  - add friend
+  */
+
 
 
   const [modalIsVisible, setModalIsVisible] = useState(false);
