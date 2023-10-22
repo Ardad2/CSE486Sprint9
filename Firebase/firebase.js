@@ -22,3 +22,4 @@ if(!firebase.apps.length)
 }
 
 export {firebase}
+

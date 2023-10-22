@@ -7,6 +7,9 @@ import { useSelector, dispatch , useDispatch} from 'react-redux';
 import { authenticateAuthTokens, logoutAuthTokens } from '../../store/redux/authTokens';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 //import {auth} from '../../firebase';
+import { auth, db } from '../../firebase';
+import { setDoc, doc } from 'firebase/firestore'
+import { addUser } from '../../store/redux/users';
 
 
 function SignupScreen() {
@@ -29,6 +32,11 @@ function SignupScreen() {
           username: data.email,
         }
       ));
+
+      setDoc(doc(db,"data","Hello"),{
+        email: email,
+        password: password
+    })
 
 
 //      createUserWithEmailAndPassword(auth,email,password);
