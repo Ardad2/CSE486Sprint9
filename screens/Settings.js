@@ -1,10 +1,23 @@
+// save user preferences for settings
+// currently have vacation mode and profile information as options
+
+/*
+Settings needed to be added:
+  - Better display 
+  - Better usability
+  - Easy functionality to easily change settings
+  - Vacation mode having the ability to take off notifications for the time being
+  - Save settings
+  - Settings being able to reached regardless of the page you're on
+  - Change username/name/password
+*/
+
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button} from 'react-native';
 import { useState } from 'react';
 import { useSelector, dispatch , useDispatch} from 'react-redux';
 import { authenticateAuthTokens, logoutAuthTokens } from '../store/redux/authTokens';
-
 
 export default function Settings() {
 
@@ -15,7 +28,6 @@ export default function Settings() {
   function logout() {
     dispatch(logoutAuthTokens());
  }
-
 
   return (
     <View style={styles.container}>
@@ -31,17 +43,6 @@ export default function Settings() {
     </View>
   );
 }
-
-/*
-Settings needed to be added:
-  - Better display 
-  - Better usability
-  - Easy functionality to easily change settings
-  - Vacatioon mode having the ability to take off notifications for the time being
-  - Save settings
-  - Settings being able to reached regardless of the page you're on
-  - Change username/name/password
-*/
 
 const styles = StyleSheet.create({
   container: {
