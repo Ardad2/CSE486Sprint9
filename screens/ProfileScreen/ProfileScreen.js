@@ -57,7 +57,9 @@ function ProfileScreen( {route, navigation} )
     - Bio for the user
     - Name of the user
     - Username for the user
-    - 
+    - View account information
+    - potentially link to facebook account?
+    - add Maz's easier capability for those that are disabled
     */
     return (
         <View> 
