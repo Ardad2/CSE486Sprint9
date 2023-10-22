@@ -59,6 +59,9 @@ function ProfileScreen( {route, navigation} )
     - View account information
     - potentially link to facebook account?
     - add Maz's easier capability for those that are disabled
+
+   also was thinking about maybe the ability to add a light screen mode
+    or a dark screen mode since that is quite popular recently
     */
     
     return (

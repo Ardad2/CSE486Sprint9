@@ -31,6 +31,11 @@ export default function Settings() {
     </View>
   );
 }
+/*
+would be cool to add into settings a light screen
+or a dark screen option
+Im sure it would be relatively easy to implement and something I can look into.
+*/
 
 const styles = StyleSheet.create({
   container: {
