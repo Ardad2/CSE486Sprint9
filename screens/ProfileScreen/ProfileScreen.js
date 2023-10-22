@@ -62,10 +62,6 @@ function ProfileScreen( {route, navigation} )
 
    also was thinking about maybe the ability to add a light screen mode
     or a dark screen mode since that is quite popular recently
-    */
-
-
-    /*
 
     Some more possible features:
         allow the ability to post highlights to their friends
