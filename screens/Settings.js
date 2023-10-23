@@ -12,8 +12,20 @@ export default function Settings() {
 
   const dispatch = useDispatch();
 
+  const vacationMode = false;
+
+
+  // https://darkmodejs.learn.uno/
+  const darkmode =  new Darkmode();
+  darkmode.toggle();
+  console.log(darkmode.isActivated()) // will return true
+
   function logout() {
     dispatch(logoutAuthTokens());
+ }
+
+  function darkMode() {
+    dispatch(darkModeAuthTokens());
  }
 
 
