@@ -28,6 +28,17 @@ export default function Settings() {
     dispatch(darkModeAuthTokens());
  }
 
+    // function to increase color contrast
+    // function increaseContrast() {
+    //     dispatch(increaseContrastAuthTokens());
+    // }
+  
+    // function saveSettings() {
+    //     dispatch(saveSettingsAuthTokens());
+    // }
+
+  
+
 
   return (
     <View style={styles.container}>
