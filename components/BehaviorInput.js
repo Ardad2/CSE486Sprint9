@@ -14,6 +14,20 @@ function BehaviorInput(props) {
           setEnteredBehaviorText('');
       }
 
+    function cancelBehaviorAddition() { //Note: this is a function that is passed in as a prop from App.js
+        props.onCancel();
+        setEnteredBehaviorText('');
+    }
+
+    function behaviorReport() { // dispatch(behaviorReportAuthTokens());
+        // dispatch(behaviorReport());
+    }
+
+    function habitReport() { // dispatch(habitReportAuthTokens());
+        // dispatch(habitReport());
+        // where the user can see progress in behaviors over an X amount of time.
+    }
+
     return (
         <Modal visible={props.visible} animationType="slide">
         <View style ={styles.inputContainer}>
