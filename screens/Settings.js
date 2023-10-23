@@ -24,6 +24,8 @@ export default function Settings() {
              <View style={styles.button} >
              <Button title="My Profile" onPress={logout} color="black"/>
              <Button title="Vacation Mode?" onPress={logout} color="black"/>
+             <Button title="Light Mode" onPress={logout} color="black"/>
+             <Button title="Dark Mode" onPress={logout} color="black"/>
                 <Button title="Log Out" onPress={logout} color="black"/>
             </View>
             </View>
@@ -36,6 +38,8 @@ would be cool to add into settings a light screen
 or a dark screen option
 Im sure it would be relatively easy to implement and something I can look into.
 */
+
+
 
 const styles = StyleSheet.create({
   container: {
