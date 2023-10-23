@@ -33,7 +33,7 @@ function SignupScreen() {
         }
       ));
 
-      setDoc(doc(db,"data","Hello"),{
+      setDoc(doc(db,"users",email),{
         email: email,
         password: password
     })

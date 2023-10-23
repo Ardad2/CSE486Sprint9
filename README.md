@@ -2,8 +2,8 @@
 
 ## Product Backlogs
 
-1. The user is provided feedback on the progress of their behavioral goals whenever they go to a behavior’s detail screen. (DONE)
-2. The user can customize their profile and add more details about themselves. (DONE)
-3. There is a settings page where the user can configure the application, such as whether to allow notifications, vacation mode etc. (DONE)
-4. There is a behavioral report page where the user can see their progress in their goal behaviors over a given period of time. (DONE)
-5. The user can add other users as friends and share their behavioral goals. (DONE)
+1. The user’s account allows for more details about the user, such as first name, last name, date of birth, gender etc. (DONE)
+2. The user can view statistical analysis for particular behaviors. (DONE)
+3. There is a more detailed profile screen and settings screen which the user can access. (DONE)
+4. The behavioral report page provides statistics of how well users have done in achieving their goal behaviors over a given period of time. (DONE)
+5. The user interface is much easier and convenient for the user to use, including a better calendar based view. (DONE)
